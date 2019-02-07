@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { createStore, applyMiddleware} from 'redux';
-import { Provider, connect } from 'react-redux';
+import { Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
-import { logger } from './logger';
+import logger  from 'redux-logger';
 
 const store = createStore(
     rootReducer,

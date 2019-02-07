@@ -29,15 +29,14 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 error: "",
-                friendsFetched: action.payload,
-                fetchingFriends: false
+                friends: action.payload,
+                friendsFetched: true
             };
         case FETCH_FRIEND_FAILURE:
             return {
                 ...state,
-                error: action.payload,
-                fetchingFriends: false
-            }
+                error: action.payload
+            };
         default:
             return state;
     }
