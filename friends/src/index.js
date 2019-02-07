@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware} from 'redux';
 import { Provider, connect } from 'react-redux';
 import thunk from 'redux-thunk';
-import rootReducer from './store/reducers';
+import rootReducer from './reducers';
+import { logger } from './logger';
 
 const store = createStore(
     rootReducer,
-    (applyMiddleware(thunk))
+    (applyMiddleware(thunk, logger))
   );
 
 
