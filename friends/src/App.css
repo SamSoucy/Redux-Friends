@@ -30,3 +30,18 @@
     transform: rotate(360deg);
   }
 }
+
+.friendForm{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 12%;
+  margin-left: 44%;
+  margin-top:2%;
+  padding: 10px 10px;
+  border: 1px solid black;
+  font-size: 30px;
+}
+
+
+
